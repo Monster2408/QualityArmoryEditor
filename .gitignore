@@ -1,0 +1,25 @@
+.htaccess
+# .htaccessを隠す
+ads.txt
+
+blog/
+
+.vs/
+
+test/
+test.*
+
+ban-user.php
+
+config.php
+# config.phpを隠す
+.htaccess.txt
+# .htaccess.txtを隠す
+*.pem
+
+phpseclib/
+
+*.lnk
+
+.editorconfig
+*.bat
