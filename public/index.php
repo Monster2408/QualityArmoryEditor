@@ -75,8 +75,8 @@ if (isset($_POST) && isset($_FILES['gun_file'])) {
                 </div>
             </div>
             <div class="section">
-                <h2 class="japanese">クラフト素材(Material,Durability,Amount)</h2>
-                <h2 class="english">Crafting Requirements(Material,Durability,Amount)</h2>
+                <h2 class="japanese">クラフト素材</h2>
+                <h2 class="english">Crafting Requirements</h2>
                 <div>
                     <div>
                         <label for="craftingRequirementsMaterial">Material</label><input type="text" name="craftingRequirementsMaterial" id="craftingRequirementsMaterial">
@@ -497,13 +497,16 @@ if (isset($_POST) && isset($_FILES['gun_file'])) {
     document.getElementById('firing_knockback').value = (nativeObject.firing_knockback !== undefined && nativeObject.firing_knockback !== null) ? nativeObject.firing_knockback : '';
     document.getElementById('DestructableMaterials').value = nativeObject.DestructableMaterials ? nativeObject.DestructableMaterials.join(', ') : '';
     document.getElementById('lastModifiedByQA').value = nativeObject.lastModifiedByQA || '';
+</script>
 
+<?php endif; ?>
+<script>
     japanese_button = document.getElementById('japanese_button');
     english_button = document.getElementById('english_button');
     // 日本語ボタンが押されたとき
     japanese_button.addEventListener('click', function() {
         document.querySelectorAll('.japanese').forEach(function(element) {
-            element.style.display = 'block';
+            element.style.display = '';
         });
         document.querySelectorAll('.english').forEach(function(element) {
             element.style.display = 'none';
@@ -516,7 +519,7 @@ if (isset($_POST) && isset($_FILES['gun_file'])) {
             element.style.display = 'none';
         });
         document.querySelectorAll('.english').forEach(function(element) {
-            element.style.display = 'block';
+            element.style.display = '';
         });
     });
 
@@ -525,7 +528,4 @@ if (isset($_POST) && isset($_FILES['gun_file'])) {
         element.style.display = 'none';
     });
 </script>
-
-<?php endif; ?>
-
 </html>
